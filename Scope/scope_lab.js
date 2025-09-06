@@ -27,6 +27,57 @@ function show(){
 }
 
 show();
-console.log(functionVar); // Throws ReferenceError
-console.log(functionLet); // Throws ReferenceError
-console.log(functionConst); // Throws ReferenceError
+// console.log(functionVar); // Throws ReferenceError
+// console.log(functionLet); // Throws ReferenceError
+// console.log(functionConst); // Throws ReferenceError
+
+{
+    var testVar = "Hey test 1";
+    let testLet = "Hey test 2";
+    const testConst = "Hey test 3";
+
+    testVar = "can reassign";
+    testLet = "can reassign";
+    //testConst = "immutable"; //TypeError
+
+}
+
+console.log(testVar);
+//console.log(testLet); //Reference Error
+//console.log(testConst); //Reference Error
+
+console.log(typeof testVar);
+console.log(typeof testLet); //Undefined
+console.log(typeof testConst); //Undefined
+
+
+testVar = "variable declared in the block";
+testLet = "new variable";
+testConst = "new variable";
+
+console.log(typeof testVar); //String
+console.log(typeof testLet); //String
+console.log(typeof testConst); //String
+
+console.log(testVar);
+console.log(testLet);
+console.log(testConst);
+
+{
+    console.log(testVar);
+    console.log(testLet);
+    console.log(testConst);
+
+    testVar = "hey am I the same???";
+    testLet = "hey am I the same???";
+    testConst = "hey am I the same???";
+
+    console.log(testVar);
+    console.log(testLet);
+    console.log(testConst);
+
+}
+
+console.log(testVar);
+console.log(testLet);
+console.log(testConst);
