@@ -49,3 +49,23 @@ let authenticationStatus;
 
 authenticationStatus = isAunthenticated ? "Authenticated":"Not authenticated";
 
+//Practice Task
+let employeeType = "Employee";
+let dietaryServices;
+
+switch (employeeType) {
+    case 'Employee':
+        dietaryServices = "Have access to Dietary Services";
+        break;
+    case 'Enrolled Member':
+        dietaryServices = "Have access to Dietary Services and one-on-one interaction with a dietician."
+        break;
+    case 'Subscriber':
+        dietaryServices = "Have partial access to Dietary Services";
+        break;
+    default:
+        dietaryServices = "You need to enroll or have to subscribe at least first to avail dietary services";
+    
+}
+
+console.log("Type of Service: ",dietaryServices);
